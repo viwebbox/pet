@@ -7,7 +7,7 @@ on:
       base_url:
         description: "URL, to run tests against"
         required: true
-        default: https://petstore.swagger.io/v2/
+        default: https://petstore.swagger.io/
 
 jobs:
   playwright-automation-checks:
@@ -36,7 +36,7 @@ jobs:
       - name: Set BASE_URL if not passed in
         if: env.BASE_URL == null
         run: |
-          echo "BASE_URL=https://petstore.swagger.io/v2/" >> $GITHUB_ENV
+          echo "BASE_URL=https://petstore.swagger.io/" >> $GITHUB_ENV
 
       - name: Create Test List if pull_request
         if: github.event.pull_request
