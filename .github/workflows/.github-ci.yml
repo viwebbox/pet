@@ -28,9 +28,10 @@ jobs:
           node-version: 20
 
       - name: Install node_modules and Playwright
-      - run: npm ci --ignore-scripts
-      - run: npx playwright install --with-deps
-      - run: npx playwright install-deps
+        run: |
+          npm ci --ignore-scripts
+          npx playwright install --with-deps
+          npx playwright install-deps
 
       - name: Set BASE_URL if not passed in
         if: env.BASE_URL == null
