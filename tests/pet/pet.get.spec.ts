@@ -12,4 +12,11 @@ test.describe("pet/ GET requests @pet", async () => {
             const body = await response.json();
         });
     })
+
+    test(`GET pet summary with specific pet id`, async ({ request }) => {
+        const response = await request.get(`v2/pet/1`);
+
+        expect(response.status()).toBe(200);
+        const body = await response.json();
+    });
 });
