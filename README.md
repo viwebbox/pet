@@ -21,3 +21,4 @@ Add 'prettier' value into the extends array of .eslintrc.cjs file.
 `npx prettier . --write`
 
 `npx husky-init && npm install`
+

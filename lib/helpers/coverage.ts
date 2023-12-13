@@ -33,7 +33,7 @@ export async function fetchOpenApi(resource: string) {
   const response = await requestContext.get(`${baseURL}v2/${resource}.json`, { timeout: 5000 });
 
   const body = await response.json();
-  writeFile(`./lib/spec3/${resource}_spec3.json`, JSON.stringify(body, null, 2));
+  writeFile(`.spec3/${resource}_spec3.json`, JSON.stringify(body, null, 2));
   return body;
 }
 

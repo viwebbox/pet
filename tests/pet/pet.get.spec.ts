@@ -1,3 +1,4 @@
+import { validateJsonSchema } from "@helpers/validateJsonSchema";
 import { expect, test } from "@playwright/test";
 import { PetStatus } from "../../enums";
 
@@ -10,7 +11,7 @@ test.describe("pet/ GET requests @pet", async () => {
       expect(response.status()).toBe(200);
       const body = await response.json(); // eslint-disable-line
 
-      // await createAssertions(body);
+      await validateJsonSchema("GET_pet_findByStatus", "pet", body);
     });
   });
 });
