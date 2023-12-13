@@ -23,7 +23,7 @@ module.exports = {
       {
         selector: "CallExpression[callee.name='validateJsonSchema'][arguments.length!=3]",
         message: "We don't want to commit validateJsonSchema(*,*,*,true)😎",
-      }
+      },
     ],
   },
 };
