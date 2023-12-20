@@ -1,0 +1,10 @@
+# Playwright Specific
+node_modules/
+test-results/
+playwright-report
+
+# IDE - VSCode
+.vscode/*
+
+# Docs files
+lib/spec3/*_spec3.json
