@@ -8,6 +8,8 @@ export async function createAssertions(object: object, paramName = "body"): Prom
       console.log(`expect(${paramName}.${key}).toBeNull();`);
     } else if (typeof value === "number") {
       console.log(`expect(${paramName}.${key}).toBe(${value});`);
+    } else if (typeof value === "boolean") {
+      console.log(`expect(${paramName}.${key}).toBe(${value});`);
     } else if (typeof value === "object") {
       if (Array.isArray(value)) {
         if (value.length === 0) {
